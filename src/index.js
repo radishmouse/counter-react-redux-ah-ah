@@ -9,10 +9,11 @@ import counters from './reducers';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-window.actions = actions;
 const store = createStore(counters);
-window.store = store;
 
+// for ver' nice debuggingz
+window.actions = actions;
+window.store = store;
 
 ReactDOM.render(
   <Provider store={store}>
