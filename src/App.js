@@ -14,7 +14,7 @@ class App extends Component {
             className="App-logo"
             alt="logo"
           />
-          <h2>Welcome to the Counter</h2>
+          <h2>{this.props.values} AH AH!</h2>
         </div>
         <CounterAppContainer />
         <CounterListContainer />
