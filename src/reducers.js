@@ -53,7 +53,6 @@ const counters = (state={}, action) => {
       delete newState[action.id];
       return newState;
 
-
     default:
       return state;
   }
