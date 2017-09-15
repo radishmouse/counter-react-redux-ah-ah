@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from './counter';
+import Counter from './Counter';
 
 const CounterList = ({
   counters,
@@ -8,14 +8,14 @@ const CounterList = ({
 }) => (
   <div>
     {
-      counters.map( (counter, idx) => (
-        <Counter key={idx}
-          id={counter.id}
-          val={counter[counter.id]}
-          handleIncrement={handleIncrement},
+      Object.keys(counters).map( (counterId, idx) => (
+        <Counter key={counterId}
+          id={counterId}
+          val={counters[counterId]}
+          handleIncrement={handleIncrement}
           handleDecrement={handleDecrement}
         />
-      ));
+      ))
     }
   </div>
 );
