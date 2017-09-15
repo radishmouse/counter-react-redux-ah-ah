@@ -4,16 +4,20 @@ const Counter = ({
   id,
   val,
   handleIncrement,
-  handleDecrement
+  handleDecrement,
+  handleDestroy,
 }) => (
     <div>
-        <span>{val}</span>
-        <button onClick={
-          (e) => handleIncrement(id)
-        }>+</button>
-        <button onClick={
-          (e) => handleDecrement(id)
-        }>-</button>
+      <button onClick={
+        (e) => handleDecrement(id)
+      }>-</button>
+      <span>{val}</span>
+      <button onClick={
+        (e) => handleIncrement(id)
+      }>+</button>
+      <a href="#" onClick={
+        (e) => handleDestroy(id)
+      }>x</a>
     </div>
 );
 

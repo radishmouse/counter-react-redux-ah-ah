@@ -13,6 +13,9 @@ const mapDispatchToProps = dispatch => ({
   handleDecrement: id => {
     dispatch(actions.decrementCounter(id))
   },
+  handleDestroy: id => {
+    dispatch(actions.destroyCounter(id))
+  }
 });
 
 export default connect(

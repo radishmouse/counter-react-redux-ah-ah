@@ -4,7 +4,8 @@ import Counter from './Counter';
 const CounterList = ({
   counters,
   handleIncrement,
-  handleDecrement
+  handleDecrement,
+  handleDestroy,
 }) => (
   <div>
     {
@@ -14,6 +15,7 @@ const CounterList = ({
           val={counters[counterId]}
           handleIncrement={handleIncrement}
           handleDecrement={handleDecrement}
+          handleDestroy={handleDestroy}
         />
       ))
     }
