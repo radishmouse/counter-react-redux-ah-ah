@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import UndoRedo from './UndoRedo';
 
 const mapStateToProps = state => ({
-  canUndo: state.past.length > 0,
-  canRedo: state.future.length > 0,
+  canUndo: state.counters.past.length > 0,
+  canRedo: state.counters.future.length > 0,
 });
 
 const mapDispatchToProps = dispatch => ({

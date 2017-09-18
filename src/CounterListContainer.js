@@ -3,14 +3,12 @@ import { connect } from 'react-redux';
 import * as actions from './actions';
 
 const mapStateToProps = state => ({
-  counters: state.present
+  counters: state.counters.present
 });
 
 const mapDispatchToProps = dispatch => ({
   handleIncrement: id => {
-    setTimeOut(() => {
-      dispatch(actions.incrementCounter(id))
-    } , 5000)
+    dispatch(actions.incrementCounter(id))
   },
   handleDecrement: id => {
     dispatch(actions.decrementCounter(id))
