@@ -8,7 +8,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   handleIncrement: id => {
-    dispatch(actions.incrementCounter(id))
+    setTimeOut(() => {
+      dispatch(actions.incrementCounter(id))
+    } , 5000)
   },
   handleDecrement: id => {
     dispatch(actions.decrementCounter(id))
