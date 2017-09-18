@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import CounterListContainer from './CounterListContainer';
 import CounterAppContainer from './CounterAppContainer';
+import UndoRedoContainer from './UndoRedoContainer';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           />
           <h2>{this.props.values} AH AH!</h2>
         </div>
+        <UndoRedoContainer />
         <CounterAppContainer />
         <CounterListContainer />
       </div>

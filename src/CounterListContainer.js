@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from './actions';
 
 const mapStateToProps = state => ({
-  counters: state
+  counters: state.present
 });
 
 const mapDispatchToProps = dispatch => ({

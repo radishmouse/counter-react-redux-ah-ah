@@ -1,5 +1,6 @@
 
 import Guid from 'guid';
+import undoable, { distinctState } from 'redux-undo';
 
 import {
   INCREMENT,
@@ -58,4 +59,6 @@ const counters = (state={}, action) => {
   }
 };
 
-export default counters;
+export default undoable(counters, {
+  filter: distinctState()
+});

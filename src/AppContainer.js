@@ -2,10 +2,11 @@
 import { connect } from 'react-redux';
 import App from './App';
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+  return {
   values: Object
-            .keys(state)
-            .reduce( (tally, key)  => tally + String(state[key]), '')
-});
+            .keys(state.present)
+            .reduce( (tally, key)  => tally + String(state.present[key]), '')
+}};
 
 export default connect(mapStateToProps)(App);
