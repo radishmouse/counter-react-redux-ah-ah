@@ -3,10 +3,10 @@
 
 the state
 {
-  {"asfd-adsf-asdf": 0},
-  {"22ad-zxcv-asbf": 5},
-  {"zz00-wjer-asdf": 8},
-  {"23kk-adsf-a23f": -1},
+  "asfd-adsf-asdf": 0,
+  "22ad-zxcv-asbf": 5,
+  "zz00-wjer-asdf": 8,
+  "23kk-adsf-a23f": -1,
 }
 
 

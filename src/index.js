@@ -9,7 +9,10 @@ import counters from './reducers';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-const store = createStore(counters);
+const store = createStore(
+  counters,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 // for ver' nice debuggingz
 window.actions = actions;
