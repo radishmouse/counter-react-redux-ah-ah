@@ -3,6 +3,7 @@ import './App.css';
 import CounterListContainer from './CounterListContainer';
 import CounterAppContainer from './CounterAppContainer';
 import UndoRedoContainer from './UndoRedoContainer';
+import MartaDashContainer from './MartaDashContainer';
 
 // import fetchMartaData from './fetchMartaData';
 
@@ -21,6 +22,7 @@ class App extends Component {
         <UndoRedoContainer />
         <CounterAppContainer />
         <CounterListContainer />
+        <MartaDashContainer />
       </div>
     );
   }
