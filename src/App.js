@@ -4,7 +4,7 @@ import CounterListContainer from './CounterListContainer';
 import CounterAppContainer from './CounterAppContainer';
 import UndoRedoContainer from './UndoRedoContainer';
 
-import fetchMartaData from './fetchMartaData';
+// import fetchMartaData from './fetchMartaData';
 
 class App extends Component {
   render() {

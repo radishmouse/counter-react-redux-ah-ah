@@ -4,23 +4,14 @@ import './index.css';
 import AppContainer from './AppContainer';
 import registerServiceWorker from './registerServiceWorker';
 
-import * as actions from './actions';
-import counters from './reducers';
-import marta from './marta';
+// import * as actions from './actions';
+import rootReducer from './reducers';
 import {
-  combineReducers,
   createStore,
   applyMiddleware
 } from 'redux';
 import { Provider } from 'react-redux';
 import reduxPromise from 'redux-promise';
-
-import fetchMartaData from './fetchMartaData';
-
-const rootReducer = combineReducers({
-  counters,
-  marta
-});
 
 const store = createStore(
   rootReducer,
@@ -31,9 +22,8 @@ const store = createStore(
 );
 
 // for ver' nice debuggingz
-window.actions = actions;
+// window.actions = actions;
 window.store = store;
-window.fetchMartaData = fetchMartaData;
 
 ReactDOM.render(
   <Provider store={store}>

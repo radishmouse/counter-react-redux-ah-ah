@@ -1,6 +1,6 @@
 import CounterList from './CounterList';
 import { connect } from 'react-redux';
-import * as actions from './actions';
+import * as actions from './actions/counters';
 
 const mapStateToProps = state => ({
   counters: state.counters.present

@@ -7,7 +7,7 @@ import {
   DECREMENT,
   CREATE_COUNTER,
   DESTROY_COUNTER,
-} from './actions';
+} from '../actions/counters';
 
 const counter = (state, action) => {
   switch (action.type) {
