@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 class MartaDash extends Component {
 
   render() {
+    const filter = this.props.filter || 'Airport';
     return (
       <div>
         <button onClick={this.props.handleClick}>
@@ -11,11 +12,11 @@ class MartaDash extends Component {
         </button>
         {
           this.props.marta ?
-            this.props.marta.map((item, idx) => (
-              <p key={idx}>{item.DESTINATION}: {item.STATION} ({item.WAITING_SECONDS}s)</p>
-            ))
-            : <p></p>
-
+            this.props.marta.filter( (item) => (item.DESTINATION === filter))
+              .map((item, idx) => (
+                <p key={idx}>{item.DESTINATION}: {item.STATION} ({item.WAITING_SECONDS}s)</p>
+              ))
+              : <p></p>
         }
       </div>
     );

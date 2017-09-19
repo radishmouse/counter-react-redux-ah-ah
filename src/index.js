@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import AppContainer from './AppContainer';
-import MartaDashContainer from './MartaDashContainer';
+import MartaApp from './MartaApp';
 import registerServiceWorker from './registerServiceWorker';
 
 // import * as actions from './actions';
@@ -48,7 +48,8 @@ ReactDOM.render(
           </li>
         </ul>
         <Route path="/count" component={ AppContainer } />
-        <Route path="/marta" component={ MartaDashContainer } />
+        <Route path="/marta" exact component={ MartaApp } />
+        <Route path="/marta/:filter" component={ MartaApp } />
       </div>
     </Router>
   </Provider>,
